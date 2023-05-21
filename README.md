@@ -17,6 +17,8 @@ A combined api for editable html and textarea
 
 <div style="text-align: center; margin-bottom: 20px;" align="center">
 
+### **[Documentation](https://www.saqqdy.com/use-textarea)** • **[Change Log](./CHANGELOG.md)**
+
 </div>
 
 ## Installing
