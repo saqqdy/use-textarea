@@ -1,0 +1,466 @@
+{
+	"id": 0,
+	"name": "index.md",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"children": [
+		{
+			"id": 1,
+			"name": "TextareaElement",
+			"variant": "declaration",
+			"kind": 4194304,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 5,
+					"character": 12,
+					"url": "https://github.com/saqqdy/use-textarea/blob/057d843/src/index.ts#L5"
+				}
+			],
+			"type": {
+				"type": "union",
+				"types": [
+					{
+						"type": "reference",
+						"target": {
+							"sourceFileName": "node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/lib.dom.d.ts",
+							"qualifiedName": "HTMLTextAreaElement"
+						},
+						"name": "HTMLTextAreaElement",
+						"package": "typescript"
+					},
+					{
+						"type": "reference",
+						"target": {
+							"sourceFileName": "node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/lib.dom.d.ts",
+							"qualifiedName": "HTMLInputElement"
+						},
+						"name": "HTMLInputElement",
+						"package": "typescript"
+					},
+					{
+						"type": "reference",
+						"target": {
+							"sourceFileName": "node_modules/.pnpm/@vue+reactivity@3.3.4/node_modules/@vue/reactivity/dist/reactivity.d.ts",
+							"qualifiedName": "Ref"
+						},
+						"typeArguments": [
+							{
+								"type": "union",
+								"types": [
+									{
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/lib.dom.d.ts",
+											"qualifiedName": "HTMLTextAreaElement"
+										},
+										"name": "HTMLTextAreaElement",
+										"package": "typescript"
+									},
+									{
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/lib.dom.d.ts",
+											"qualifiedName": "HTMLInputElement"
+										},
+										"name": "HTMLInputElement",
+										"package": "typescript"
+									}
+								]
+							}
+						],
+						"name": "Ref",
+						"package": "@vue/reactivity"
+					}
+				]
+			}
+		},
+		{
+			"id": 2,
+			"name": "default",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 10,
+					"character": 9,
+					"url": "https://github.com/saqqdy/use-textarea/blob/057d843/src/index.ts#L10"
+				}
+			],
+			"signatures": [
+				{
+					"id": 3,
+					"name": "default",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 10,
+							"character": 0,
+							"url": "https://github.com/saqqdy/use-textarea/blob/057d843/src/index.ts#L10"
+						}
+					],
+					"parameters": [
+						{
+							"id": 4,
+							"name": "element",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"target": 1,
+										"name": "TextareaElement",
+										"package": "use-textarea"
+									}
+								]
+							}
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "intrinsic",
+								"name": "undefined"
+							},
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 5,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 6,
+											"name": "el",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "index.ts",
+													"line": 70,
+													"character": 2,
+													"url": "https://github.com/saqqdy/use-textarea/blob/057d843/src/index.ts#L70"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "node_modules/.pnpm/@vue+reactivity@3.3.4/node_modules/@vue/reactivity/dist/reactivity.d.ts",
+													"qualifiedName": "Ref"
+												},
+												"typeArguments": [
+													{
+														"type": "union",
+														"types": [
+															{
+																"type": "reference",
+																"target": {
+																	"sourceFileName": "node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/lib.dom.d.ts",
+																	"qualifiedName": "HTMLTextAreaElement"
+																},
+																"name": "HTMLTextAreaElement",
+																"package": "typescript"
+															},
+															{
+																"type": "reference",
+																"target": {
+																	"sourceFileName": "node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/lib.dom.d.ts",
+																	"qualifiedName": "HTMLInputElement"
+																},
+																"name": "HTMLInputElement",
+																"package": "typescript"
+															}
+														]
+													}
+												],
+												"name": "Ref",
+												"package": "@vue/reactivity"
+											}
+										},
+										{
+											"id": 7,
+											"name": "insert",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "index.ts",
+													"line": 71,
+													"character": 2,
+													"url": "https://github.com/saqqdy/use-textarea/blob/057d843/src/index.ts#L71"
+												}
+											],
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 8,
+													"name": "__type",
+													"variant": "declaration",
+													"kind": 65536,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "index.ts",
+															"line": 19,
+															"character": 16,
+															"url": "https://github.com/saqqdy/use-textarea/blob/057d843/src/index.ts#L19"
+														}
+													],
+													"signatures": [
+														{
+															"id": 9,
+															"name": "__type",
+															"variant": "signature",
+															"kind": 4096,
+															"flags": {},
+															"sources": [
+																{
+																	"fileName": "index.ts",
+																	"line": 19,
+																	"character": 16,
+																	"url": "https://github.com/saqqdy/use-textarea/blob/057d843/src/index.ts#L19"
+																}
+															],
+															"parameters": [
+																{
+																	"id": 10,
+																	"name": "data",
+																	"variant": "param",
+																	"kind": 32768,
+																	"flags": {},
+																	"type": {
+																		"type": "intrinsic",
+																		"name": "string"
+																	}
+																}
+															],
+															"type": {
+																"type": "intrinsic",
+																"name": "void"
+															}
+														}
+													]
+												}
+											}
+										},
+										{
+											"id": 11,
+											"name": "moveToEnd",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "index.ts",
+													"line": 72,
+													"character": 2,
+													"url": "https://github.com/saqqdy/use-textarea/blob/057d843/src/index.ts#L72"
+												}
+											],
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 12,
+													"name": "__type",
+													"variant": "declaration",
+													"kind": 65536,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "index.ts",
+															"line": 48,
+															"character": 19,
+															"url": "https://github.com/saqqdy/use-textarea/blob/057d843/src/index.ts#L48"
+														}
+													],
+													"signatures": [
+														{
+															"id": 13,
+															"name": "__type",
+															"variant": "signature",
+															"kind": 4096,
+															"flags": {},
+															"sources": [
+																{
+																	"fileName": "index.ts",
+																	"line": 48,
+																	"character": 19,
+																	"url": "https://github.com/saqqdy/use-textarea/blob/057d843/src/index.ts#L48"
+																}
+															],
+															"type": {
+																"type": "intrinsic",
+																"name": "void"
+															}
+														}
+													]
+												}
+											}
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												6,
+												7,
+												11
+											]
+										}
+									],
+									"sources": [
+										{
+											"fileName": "index.ts",
+											"line": 69,
+											"character": 8,
+											"url": "https://github.com/saqqdy/use-textarea/blob/057d843/src/index.ts#L69"
+										}
+									]
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Type Aliases",
+			"children": [
+				1
+			]
+		},
+		{
+			"title": "Functions",
+			"children": [
+				2
+			]
+		}
+	],
+	"packageName": "use-textarea",
+	"packageVersion": "1.0.0",
+	"readme": [
+		{
+			"kind": "text",
+			"text": "<div style=\"text-align: center;\" align=\"center\">\n\n# use-textarea\n\nA combined api for editable html and textarea\n\n[![NPM version][npm-image]][npm-url]\n[![Codacy Badge][codacy-image]][codacy-url]\n[![Test coverage][codecov-image]][codecov-url]\n[![npm download][download-image]][download-url]\n[![gzip][gzip-image]][gzip-url]\n[![License][license-image]][license-url]\n\n[![Sonar][sonar-image]][sonar-url]\n\n</div>\n\n<div style=\"text-align: center; margin-bottom: 20px;\" align=\"center\">\n\n### **[Documentation](https://www.saqqdy.com/use-textarea)** • **[Change Log](./CHANGELOG.md)**\n\n</div>\n\n## Installing\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```bash\n# use pnpm\n$ pnpm install use-textarea\n\n# use npm\n$ npm install use-textarea --save\n\n# use yarn\n$ yarn add use-textarea\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n## Usage\n\n### 1. Simple use:\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```ts\nimport useTextarea from 'use-textarea'\n\nconst element = document.getElementById('text-area')\nconst textarea = useTextarea(element)\n\ntextarea.insert('I am insert text')\ntextarea.moveToEnd() // move cursors to end\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n### 2. Using in vue3.x:\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```vue\n<template>\n  <textarea name=\"textarea\" ref=\"textareaRef\"></textarea>\n</template>\n\n<script setup>\nimport { ref, onMounted } from 'vue'\nimport useTextarea from 'use-textarea'\n\nconst textareaRef = ref(null)\nconst textarea = useTextarea(textareaRef)\n\nonMounted(() => {\n  textarea.insert('I am insert text')\n  textarea.moveToEnd() // move cursors to end\n})\n\ndefineExpose({\n  textareaRef\n})\n</script>\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n### 3. Using in vue2.7.x:\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```vue\n<template>\n  <textarea name=\"textarea\" ref=\"textareaRef\"></textarea>\n</template>\n\n<script>\nimport useTextarea from 'use-textarea'\n\nexport default {\n  setup() {\n    const textareaRef = ref(null)\n    const textarea = useTextarea(textareaRef)\n\n    onMounted(() => {\n      textarea.insert('I am insert text')\n      textarea.moveToEnd() // move cursors to end\n    })\n\n    return {\n      textareaRef,\n      textarea\n    }\n  }\n}\n</script>\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n### 4. Use CDN resource\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```html\n<script src=\"https://unpkg.com/vue-demi@latest/lib/index.iife.js\"></script>\n<script src=\"https://unpkg.com/use-textarea@1.0.0/dist/index.global.prod.js\"></script>\n<script>\n  const textarea = useTextarea(document.getElementById('id'))\n  // ...\n</script>\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n## Support & Issues\n\nPlease open an issue [here](https://github.com/saqqdy/use-textarea/issues).\n\n## License\n\n[MIT](LICENSE)\n\n[npm-image]: https://img.shields.io/npm/v/use-textarea.svg?style=flat-square\n[npm-url]: https://npmjs.org/package/use-textarea\n[codacy-image]: https://app.codacy.com/project/badge/Grade/f70d4880e4ad4f40aa970eb9ee9d0696\n[codacy-url]: https://www.codacy.com/gh/saqqdy/use-textarea/dashboard?utm_source=github.com&utm_medium=referral&utm_content=saqqdy/use-textarea&utm_campaign=Badge_Grade\n[codecov-image]: https://img.shields.io/codecov/c/github/saqqdy/use-textarea.svg?style=flat-square\n[codecov-url]: https://codecov.io/github/saqqdy/use-textarea?branch=master\n[download-image]: https://img.shields.io/npm/dm/use-textarea.svg?style=flat-square\n[download-url]: https://npmjs.org/package/use-textarea\n[gzip-image]: http://img.badgesize.io/https://unpkg.com/use-textarea/dist/index.global.prod.js?compression=gzip&label=gzip%20size:%20JS\n[gzip-url]: http://img.badgesize.io/https://unpkg.com/use-textarea/dist/index.global.prod.js?compression=gzip&label=gzip%20size:%20JS\n[license-image]: https://img.shields.io/badge/License-MIT-blue.svg\n[license-url]: LICENSE\n[sonar-image]: https://sonarcloud.io/api/project_badges/quality_gate?project=saqqdy_use-textarea\n[sonar-url]: https://sonarcloud.io/dashboard?id=saqqdy_use-textarea"
+		}
+	],
+	"symbolIdMap": {
+		"0": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": ""
+		},
+		"1": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "TextareaElement"
+		},
+		"2": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "useTextarea"
+		},
+		"3": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "useTextarea"
+		},
+		"4": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "element"
+		},
+		"5": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "__object"
+		},
+		"6": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "__object.el"
+		},
+		"7": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "__object.insert"
+		},
+		"8": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "__function"
+		},
+		"9": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "__function"
+		},
+		"10": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "data"
+		},
+		"11": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "__object.moveToEnd"
+		},
+		"12": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "__function"
+		},
+		"13": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "__function"
+		}
+	}
+}
