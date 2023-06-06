@@ -2,8 +2,10 @@ import type { InternalModuleFormat, OutputOptions, Plugin, RollupOptions } from 
 import nodeResolve from '@rollup/plugin-node-resolve'
 import babel from '@rollup/plugin-babel'
 import commonjs from '@rollup/plugin-commonjs'
+import cleanup from 'rollup-plugin-cleanup'
 import terser from '@rollup/plugin-terser'
 import typescript from '@rollup/plugin-typescript'
+// import injectCode from 'rollup-plugin-inject-code'
 import filesize from 'rollup-plugin-filesize'
 import replace from '@rollup/plugin-replace'
 import { visualizer } from 'rollup-plugin-visualizer'
@@ -52,27 +54,27 @@ const configs: Config[] = [
 		format: 'es',
 		env: 'development'
 	},
-	// {
-	// 	input: 'src/index.ts',
-	// 	file: 'dist/index.mjs',
-	// 	format: 'es',
-	// 	env: 'development'
-	// },
 	{
-		input: 'src/index.default.ts',
+		input: 'src/index.ts',
+		file: 'dist/index.mjs',
+		format: 'es',
+		env: 'development'
+	},
+	{
+		input: 'src/index.ts',
 		file: 'dist/index.global.js',
 		format: 'iife',
 		env: 'development'
 	},
 	{
-		input: 'src/index.default.ts',
+		input: 'src/index.ts',
 		file: 'dist/index.global.prod.js',
 		format: 'iife',
 		minify: true,
 		env: 'production'
 	},
 	{
-		input: 'src/index.default.ts',
+		input: 'src/index.ts',
 		file: 'dist/index.cjs.js',
 		format: 'cjs',
 		env: 'development'
@@ -86,22 +88,27 @@ function createEntries() {
 function createEntry(config: Config) {
 	const isGlobalBuild = config.format === 'iife'
 	const isTypeScript = config.input.endsWith('.ts')
+	// const isProduction = config.file.endsWith('prod.js')
 	const isTranspiled =
-		config.file.endsWith('bundler.js') ||
-		config.file.endsWith('browser.js') ||
-		config.file.endsWith('prod.js')
+		config.input.endsWith('bundler.js') ||
+		config.input.endsWith('browser.js') ||
+		config.input.endsWith('prod.js')
 
 	const _config: Options = {
-		external: [],
+		external: ['vue-demi', 'vue'],
 		input: config.input,
 		plugins: [],
 		output: {
 			file: config.file,
 			format: config.format,
 			exports: 'auto',
+			sourcemap: false,
 			extend: true,
 			plugins: [],
-			globals: {}
+			globals: {
+				vue: "this.VueDemi || (typeof VueDemi !== 'undefined' ? VueDemi : undefined)",
+				'vue-demi': "this.VueDemi || (typeof VueDemi !== 'undefined' ? VueDemi : undefined)"
+			}
 		},
 		onwarn: (msg: any, warn) => {
 			if (!/Circular/.test(msg)) {
@@ -114,10 +121,18 @@ function createEntry(config: Config) {
 
 	if (isGlobalBuild) {
 		_config.output.name = _config.output.name || 'useTextarea'
+		// _config.output.plugins.push(
+		// 	injectCode({
+		// 		intro: 'if(!this.VueDemi){',
+		// 		outro: '}',
+		// 		minify: isProduction,
+		// 		path: 'vue-demi/lib/index.iife.js'
+		// 	})
+		// )
 	}
 
 	if (!isGlobalBuild) {
-		_config.external.push('core-js')
+		_config.external.push('core-js', '@babel/runtime', 'js-cool')
 	}
 
 	_config.plugins.push(
@@ -150,9 +165,16 @@ function createEntry(config: Config) {
 
 	if (config.minify) {
 		_config.plugins.push(terser({ module: config.format === 'es' }))
+		// _config.output.plugins.push(terser())
 	}
 
-	_config.plugins.push(filesize({ reporter }), visualizer())
+	_config.plugins.push(
+		cleanup({
+			comments: 'all'
+		}),
+		filesize({ reporter }),
+		visualizer()
+	)
 
 	return _config
 }

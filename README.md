@@ -36,27 +36,81 @@ $ yarn add use-textarea
 
 ## Usage
 
-### General use
+### 1. Simple use:
 
-```js
-import { download } from 'use-textarea'
+```ts
+import useTextarea from 'use-textarea'
 
-download('url', options)
+const element = document.getElementById('text-area')
+const textarea = useTextarea(element)
+
+textarea.insert('I am insert text')
+textarea.moveToEnd() // move cursors to end
 ```
 
-2. by require
+### 2. Using in vue3.x:
 
-```js
-const { download } = require('use-textarea')
+```vue
+<template>
+  <textarea name="textarea" ref="textareaRef"></textarea>
+</template>
 
-download('url', options)
+<script setup>
+import { ref, onMounted } from 'vue'
+import useTextarea from 'use-textarea'
+
+const textareaRef = ref(null)
+const textarea = useTextarea(textareaRef)
+
+onMounted(() => {
+  textarea.insert('I am insert text')
+  textarea.moveToEnd() // move cursors to end
+})
+
+defineExpose({
+  textareaRef
+})
+</script>
 ```
 
-### Use CDN resource
+### 3. Using in vue2.7.x:
+
+```vue
+<template>
+  <textarea name="textarea" ref="textareaRef"></textarea>
+</template>
+
+<script>
+import useTextarea from 'use-textarea'
+
+export default {
+  setup() {
+    const textareaRef = ref(null)
+    const textarea = useTextarea(textareaRef)
+
+    onMounted(() => {
+      textarea.insert('I am insert text')
+      textarea.moveToEnd() // move cursors to end
+    })
+
+    return {
+      textareaRef,
+      textarea
+    }
+  }
+}
+</script>
+```
+
+### 4. Use CDN resource
 
 ```html
-<!-- head -->
+<script src="https://unpkg.com/vue-demi@latest/lib/index.iife.js"></script>
 <script src="https://unpkg.com/use-textarea@1.0.0/dist/index.global.prod.js"></script>
+<script>
+  const textarea = useTextarea(document.getElementById('id'))
+  // ...
+</script>
 ```
 
 ## Support & Issues
